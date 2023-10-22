@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-// import { FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa';
+import { FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa6';
 
 const Buttons: FC = () => {
     return <div className="flex gap-4 items-center">
@@ -14,7 +14,7 @@ const Buttons: FC = () => {
                 window.dispatchEvent(new CustomEvent('leftButtonRelease'));
             }}
         >
-            {/* <FaArrowLeft /> */}
+            <FaArrowLeft />
         </button>
 
         <div className="flex flex-col gap-4">
@@ -23,14 +23,12 @@ const Buttons: FC = () => {
                 className="w-10 h-10 bg-black flex items-center justify-center"
                 onTouchStart={() => {
                     window.dispatchEvent(new CustomEvent('upButtonPress'));
-                    console.log('meow')
                 }}
                 onTouchEnd={() => {
                     window.dispatchEvent(new CustomEvent('upButtonRelease'));
-                    console.log('meow2')
                 }}
             >
-                {/* <FaArrowUp /> */}
+                <FaArrowUp />
             </button>
 
             {/* trigger downButtonPress event on button press and release */}
@@ -43,7 +41,7 @@ const Buttons: FC = () => {
                     window.dispatchEvent(new CustomEvent('downButtonRelease'));
                 }}
             >
-                {/* <FaArrowDown /> */}
+                <FaArrowDown />
             </button>
         </div>
 
@@ -57,7 +55,7 @@ const Buttons: FC = () => {
                 window.dispatchEvent(new CustomEvent('rightButtonRelease'));
             }}
         >
-            {/* <FaArrowRight /> */}
+            <FaArrowRight />
         </button>
     </div>;
 }
