@@ -28,8 +28,72 @@ export const useControls = (vehicleApi: RaycastVehiclePublicApi, chassisApi: Pub
             }));
         };
 
+        const upButtonPress = () => {
+            setControls((controls) => ({
+                ...controls,
+                forward: true,
+            }));
+        }
+
+        const upButtonRelease = () => {
+            setControls((controls) => ({
+                ...controls,
+                forward: false,
+            }));
+        }
+
+        const downButtonPress = () => {
+            setControls((controls) => ({
+                ...controls,
+                backward: true,
+            }));
+        }
+
+        const downButtonRelease = () => {
+            setControls((controls) => ({
+                ...controls,
+                backward: false,
+            }));
+        }
+
+        const leftButtonPress = () => {
+            setControls((controls) => ({
+                ...controls,
+                left: true,
+            }));
+        }
+
+        const leftButtonRelease = () => {
+            setControls((controls) => ({
+                ...controls,
+                left: false,
+            }));
+        }
+
+        const rightButtonPress = () => {
+            setControls((controls) => ({
+                ...controls,
+                right: true,
+            }));
+        }
+
+        const rightButtonRelease = () => {
+            setControls((controls) => ({
+                ...controls,
+                right: false,
+            }));
+        }
+
         window.addEventListener('keydown', keydown);
         window.addEventListener('keyup', keyup);
+        window.addEventListener('upButtonPress', upButtonPress);
+        window.addEventListener('upButtonRelease', upButtonRelease);
+        window.addEventListener('downButtonPress', downButtonPress);
+        window.addEventListener('downButtonRelease', downButtonRelease);
+        window.addEventListener('leftButtonPress', leftButtonPress);
+        window.addEventListener('leftButtonRelease', leftButtonRelease);
+        window.addEventListener('rightButtonPress', rightButtonPress);
+        window.addEventListener('rightButtonRelease', rightButtonRelease);
 
         return () => {
             window.removeEventListener('keydown', keydown);

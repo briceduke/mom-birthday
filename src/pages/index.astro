@@ -4,13 +4,14 @@ import '@fontsource-variable/josefin-sans';
 
 
 import Game from '../components/Game';
+import Buttons from '../components/Buttons';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Happy Birthday!!!">
 	<main>
 		<div class="w-screen h-screen">
-			<div class="absolute w-screen h-screen z-50 flex justify-center pt-12 sm:pt-44 text-white">
+			<div class="absolute w-screen h-screen z-50 flex flex-col justify-between items-center py-12 sm:py-44 text-white">
 				<div class="gap-4 flex flex-col text-center text-lg sm:text-xl px-8">
 					<h1 class="font-bold text-6xl">Happy Birthday!</h1>
 					<p>I love you so much and appreciate all you do for me!</p>
@@ -18,6 +19,7 @@ import Layout from '../layouts/Layout.astro';
 
 					<p class="text-right">- Brice</p>
 				</div>
+				<Buttons />
 			</div>
 			
 			<Game client:only />
