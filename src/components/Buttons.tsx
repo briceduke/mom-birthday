@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa6';
 
 const Buttons: FC = () => {
-    return <div className="flex gap-4 items-center">
+    return <div className="flex gap-4 items-center pb-12 md:hidden">
 
         {/* trigger leftButtonPress event on button press and release */}
         <button
